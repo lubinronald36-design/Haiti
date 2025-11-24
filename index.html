@@ -1,103 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+   <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haiti Poems</title>
-    <style>
-        body {
-            background-color: blue;
-            color: black;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .flag {
-            position: absolute;
-            width: 100px;
-            height: 50px;
-            background-image: url('https:                                                                                                    
-            background-size: cover;
-            animation: float 10s infinite linear;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translate(0, 0);
-            }
-            100% {
-                transform: translate(100vw, 100vh);
-            }
-        }
-        
-        .poem-container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            margin-top: 100px;
-            animation: scroll 20s infinite linear;
-        }
-        
-        @keyframes scroll {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-100vh);
-            }
-        }
-        
-        .poem {
-            font-size: 24px;
-            margin-bottom: 50px;
-        }
-    </style>
+  <title>Haiti</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Floating flags -->
-    <div class="flag" style="animation-delay: 0s; top: 10%; left: 10%;"></div>
-    <div class="flag" style="animation-delay: 2s; top: 20%; left: 50%;"></div>
-    <div class="flag" style="animation-delay: 4s; top: 50%; left: 20%;"></div>
-    <div class="flag" style="animation-delay: 6s; top: 70%; left: 80%;"></div>
-    <div class="flag" style="animation-delay: 8s; top: 30%; left: 40%;"></div>
-
-    <!-- Poems -->
-    <div class="poem-container">
-        <div class="poem">
-            Je vais en Haïti, pour voir la beauté en action<br>
-            Je vais en Haïti, pour une expérience en action<br>
-            Je découvre les plages, avec une vue en action<br>
-            Je vis une aventure, avec une énergie en action<br>
-            Haïti, terre de soleil, de joie et de liberté<br>
-            Haïti, terre de soleil, où la vie est en liberté<br>
-            Haïti, terre de soleil, où la culture est en liberté<br>
-            Haïti, terre de soleil, où l'amour est en liberté
-        </div>
-        <div class="poem">
-            Je danse le kompa, avec une énergie en folie<br>
-            Je danse la kompa, avec une joie en folie<br>
-            Je célèbre la vie, avec une musique en folie<br>
-            Je vis une expérience, avec une passion en folie
-        </div>
-        <div class="poem">
-            Haïti, terre de soleil, de joie et de liberté<br>
-            Haïti, terre de soleil, où la vie est en liberté<br>
-            Haïti, terre de soleil, où la culture est en liberté<br>
-            Haïti, terre de soleil, où l'amour est en liberté
-        </div>
+  <div class="container">
+    <div class="flag-container">
+      <img src="haitian-flag.png" class="flag" id="flag1">
+      <img src="haitian-flag.png" class="flag" id="flag2">
+      <img src="haitian-flag.png" class="flag" id="flag3">
+      <img src="haitian-flag.png" class="flag" id="flag4">
     </div>
-
-    <script>
-                                     
-        for (let i = 0; i < 10; i++) {
-            const flag = document.createElement('div');
-            flag.className = 'flag';
-            flag.style.animationDelay = ${Math.random() * 10}s;
-            flag.style.top = ${Math.random() * 100}%;
-            flag.style.left = ${Math.random() * 100}%;
-            document.body.appendChild(flag);
-        }
-    </script>
+    <h1 id="title">Haiti:</h1>
+    <div class="poem-container">
+      <div class="scrolling-poem">
+        <p>Je vais en Haïti, pour voir la beauté en action</p>
+        <p>Je vais en Haïti, pour une expérience en action</p>
+        <p>Je découvre les plages, avec une vue en action</p>
+        <p>Je vis une aventure, avec une énergie en action</p>
+        <p>Haïti, terre de soleil, de joie et de liberté</p>
+        <p>Haïti, terre de soleil, où la vie est en liberté</p>
+        <p>Haïti, terre de soleil, où la culture est en liberté</p>
+        <p>Haïti, terre de soleil, où l'amour est en liberté</p>
+        <p>Je danse le kompa, avec une énergie en folie</p>
+        <p>Je danse la kompa, avec une joie en folie</p>
+        <p>Je célèbre la vie, avec une musique en folie</p>
+        <p>Je vis une expérience, avec une passion en folie</p>
+      </div>
+    </div>
+  </div>
 </body>
-</html>
+</html>                                                                                               
