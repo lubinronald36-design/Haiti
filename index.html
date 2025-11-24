@@ -1,34 +1,93 @@
-   <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Haiti</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haïti Poems</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: linear-gradient(to bottom, #87CEEB, #ADD8E6);
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .top-bar {
+            background-color: #ffd700; /* yellow */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .top-bar-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-bar {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid white;
+        }
+
+        .main-content {
+            padding: 20px;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .url-link {
+            font-size: 14px;
+            color: white;
+            text-decoration: underline;
+        }
+
+        .poem {
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="flag-container">
-      <img src="haitian-flag.png" class="flag" id="flag1">
-      <img src="haitian-flag.png" class="flag" id="flag2">
-      <img src="haitian-flag.png" class="flag" id="flag3">
-      <img src="haitian-flag.png" class="flag" id="flag4">
+    <div class="top-bar">
+        <div class="top-bar-icons">Icons 🖱️ 📁 🔍</div>
+        <div>More icons</div>
     </div>
-    <h1 id="title">Haiti:</h1>
-    <div class="poem-container">
-      <div class="scrolling-poem">
-        <p>Je vais en Haïti, pour voir la beauté en action</p>
-        <p>Je vais en Haïti, pour une expérience en action</p>
-        <p>Je découvre les plages, avec une vue en action</p>
-        <p>Je vis une aventure, avec une énergie en action</p>
-        <p>Haïti, terre de soleil, de joie et de liberté</p>
-        <p>Haïti, terre de soleil, où la vie est en liberté</p>
-        <p>Haïti, terre de soleil, où la culture est en liberté</p>
-        <p>Haïti, terre de soleil, où l'amour est en liberté</p>
-        <p>Je danse le kompa, avec une énergie en folie</p>
-        <p>Je danse la kompa, avec une joie en folie</p>
-        <p>Je célèbre la vie, avec une musique en folie</p>
-        <p>Je vis une expérience, avec une passion en folie</p>
-      </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <span class="url-link">https://example.com</span>
     </div>
-  </div>
+    <div class="main-content">
+        <h1>Haïti, Terre de Soleil</h1>
+        <div class="poem">
+            <p>Je vais en Haïti, pour voir la beauté en action<br>
+            Je vais en Haïti, pour une expérience en action<br>
+            Je découvre les plages, avec une vue en action<br>
+            Je vis une aventure, avec une énergie en action</p>
+        </div>
+        <div class="poem">
+            <p>Haïti, terre de soleil, de joie et de liberté<br>
+            Haïti, terre de soleil, où la vie est en liberté<br>
+            Haïti, terre de soleil, où la culture est en liberté<br>
+            Haïti, terre de soleil, où l'amour est en liberté</p>
+        </div>
+        <div class="poem">
+            <p>Je danse le kompa, avec une énergie en folie<br>
+            Je danse la kompa, avec une joie en folie<br>
+            Je célèbre la vie, avec une musique en folie<br>
+            Je vis une expérience, avec une passion en folie</p>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/f4Vo2f2lVkg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
 </body>
-</html>                                                                                               
+</html>
