@@ -6,10 +6,11 @@
     <title>Haiti Poems</title>
     <style>
         body {
-            background-color: #0000ff; /* Blue background */
-            color: #000; /* Black text */
+            background-color: blue;
+            color: black;
             font-family: Arial, sans-serif;
             overflow: hidden;
+            position: relative;
         }
         
         .flag {
@@ -30,6 +31,23 @@
             }
         }
         
+        .poem-container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-top: 100px;
+            animation: scroll 20s infinite linear;
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100vh);
+            }
+        }
+        
         .poem {
             font-size: 24px;
             margin-bottom: 50px;
@@ -38,14 +56,14 @@
 </head>
 <body>
     <!-- Floating flags -->
-    <div class="flag" style="animation-delay: 0s;"></div>
-    <div class="flag" style="animation-delay: 2s;"></div>
-    <div class="flag" style="animation-delay: 4s;"></div>
-    <div class="flag" style="animation-delay: 6s;"></div>
-    <div class="flag" style="animation-delay: 8s;"></div>
+    <div class="flag" style="animation-delay: 0s; top: 10%; left: 10%;"></div>
+    <div class="flag" style="animation-delay: 2s; top: 20%; left: 50%;"></div>
+    <div class="flag" style="animation-delay: 4s; top: 50%; left: 20%;"></div>
+    <div class="flag" style="animation-delay: 6s; top: 70%; left: 80%;"></div>
+    <div class="flag" style="animation-delay: 8s; top: 30%; left: 40%;"></div>
 
     <!-- Poems -->
-    <div style="text-align: center; margin-top: 100px;">
+    <div class="poem-container">
         <div class="poem">
             Je vais en Haïti, pour voir la beauté en action<br>
             Je vais en Haïti, pour une expérience en action<br>
@@ -70,84 +88,16 @@
         </div>
     </div>
 
-    <!-- Auto-playing music -->
-    <audio id="music" autoplay loop>
-        <source src="your-music-file.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-
     <script>
-                            
-        const poemContainer = document.querySelector('body > div:nth-child(2)');
-        let scrollTop = 0;
-        setInterval(() => {
-            scrollTop += 1;
-            poemContainer.scrollTop = scrollTop;
-            if (scrollTop >= poemContainer.scrollHeight - window.innerHeight) {
-                scrollTop = 0;
-            }
-        }, 50);
-
-                                   
-        const flags = document.querySelectorAll('.flag');
-        flags.forEach((flag) => {
+                                     
+        for (let i = 0; i < 10; i++) {
+            const flag = document.createElement('div');
+            flag.className = 'flag';
+            flag.style.animationDelay = ${Math.random() * 10}s;
             flag.style.top = ${Math.random() * 100}%;
             flag.style.left = ${Math.random() * 100}%;
-        });
-    </script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haiti's Resume</title>
-    <style>
-        /* your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
+            document.body.appendChild(flag);
         }
-        .section {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Haiti</h1>
-        <p>Contact: <a href="mailto:haiti@example.com">haiti@example.com</a></p>
-    </header>
-    <section class="section">
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-    </section>
-    <section class="section">
-        <h2>Experience</h2>
-        <ul>
-            <li>
-                <h3>Job Title</h3>
-                <p>Company Name, 2020-Present</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            </li>
-        </ul>
-    </section>
-    <section class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </section>
-    <div class="music-playlist" aria-label="4-track piano/minimal playlist" style="max-width:680px; margin:20px auto; padding:10px;">
-        <h2>My Favorite Music</h2>
-        <!-- music playlist content here -->
-    </div>
-    <script>
-        /* your JavaScript code here */
     </script>
 </body>
 </html>
