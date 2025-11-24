@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,15 +9,14 @@
             color: #000; /* Black text */
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
         
         #lyrics {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             font-size: 24px;
             text-align: center;
+            width: 100%;
         }
         
         .flag {
@@ -50,9 +47,9 @@
     </style>
 </head>
 <body>
-    <img src="https://flagpedia.net/data/flags/icon/72x54/ht.png" class="flag top-left">
+    <img src="https:                                                                    
     <img src="https://flagpedia.net/data/flags/icon/72x54/ht.png" class="flag top-right">
-    <img src="https://flagpedia.net/data/flags/icon/72x54/ht.png" class="flag bottom-left">
+    <img src="https:                                                                       
     <img src="https://flagpedia.net/data/flags/icon/72x54/ht.png" class="flag bottom-right">
     
     <div id="lyrics">
@@ -64,12 +61,12 @@
     
     <script>
         const lyrics = document.getElementById('lyrics');
-        let position = 0;
+        let position = window.innerHeight;
         function scrollLyrics() {
-            position += 1;
+            position -= 1;
             lyrics.style.top = position + 'px';
-            if (position > window.innerHeight) {
-                position = -lyrics.offsetHeight;
+            if (position < -lyrics.offsetHeight) {
+                position = window.innerHeight;
             }
             requestAnimationFrame(scrollLyrics);
         }
