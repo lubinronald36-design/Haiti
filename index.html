@@ -1,20 +1,66 @@
+html
 <!DOCTYPE html>
 <html>
 <head>
 	<title>HAITI Cherieeeee...</title>
 	<style>
 		body {
+			background-color: #3498db; /* Blue background */
 			font-family: Arial, sans-serif;
-			color: #333;
+			color: #000; /* Black text */
 		}
 		#lyrics {
-			width: 80%;
-			margin: 40px auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 24px;
 			text-align: center;
+		}
+		.flag {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+		.flower-icon {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+		}
+		.top-left {
+			top: 10px;
+			left: 100px;
+		}
+		.top-right {
+			top: 10px;
+			right: 100px;
+		}
+		.bottom-left {
+			bottom: 10px;
+			left: 100px;
+		}
+		.bottom-right {
+			bottom: 10px;
+			right: 100px;
 		}
 	</style>
 </head>
 <body>
+	<div class="flag">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/125px-Flag_of_Haiti.svg.png" width="100" height="50">
+	</div>
+	<div class="flower-icon top-left">
+		<img src="https://www.svgrepo.com/show/15843/flower.svg" width="50" height="50">
+	</div>
+	<div class="flower-icon top-right">
+		<img src="https://www.svgrepo.com/show/15843/flower.svg" width="50" height="50">
+	</div>
+	<div class="flower-icon bottom-left">
+		<img src="https://www.svgrepo.com/show/15843/flower.svg" width="50" height="50">
+	</div>
+	<div class="flower-icon bottom-right">
+		<img src="https://www.svgrepo.com/show/15843/flower.svg" width="50" height="50">
+	</div>
 	<div id="lyrics">
 		<p>Je vais en Haïti, pour voir la beauté en action</p>
 		<p>Je vais en Haïti, pour une expérience en action</p>
@@ -31,5 +77,21 @@
 		<p>Je célèbre la vie, avec une musique en folie</p>
 		<p>Je vis une expérience, avec une passion en folie</p>
 	</div>
+
+	<script>
+		const lyrics = document.getElementById('lyrics');
+		let position = 0;
+
+		function scrollLyrics() {
+			position += 1;
+			lyrics.style.top = position + 'px';
+			if (position > window.innerHeight) {
+				position = -lyrics.offsetHeight;
+			}
+			requestAnimationFrame(scrollLyrics);
+		}
+
+		scrollLyrics();
+	</script>
 </body>
 </html>
