@@ -1,3 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiti Poems</title>
+    <style>
+        body {
+            background-color: #0000ff; /* Blue background */
+            color: #000; /* Black text */
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        
+        .flag {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background-image: url('https:                                                                                                    
+            background-size: cover;
+            animation: float 10s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(100vw, 100vh);
+            }
+        }
+        
+        .poem {
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating flags -->
+    <div class="flag" style="animation-delay: 0s;"></div>
+    <div class="flag" style="animation-delay: 2s;"></div>
+    <div class="flag" style="animation-delay: 4s;"></div>
+    <div class="flag" style="animation-delay: 6s;"></div>
+    <div class="flag" style="animation-delay: 8s;"></div>
+
+    <!-- Poems -->
+    <div style="text-align: center; margin-top: 100px;">
+        <div class="poem">
+            Je vais en Haïti, pour voir la beauté en action<br>
+            Je vais en Haïti, pour une expérience en action<br>
+            Je découvre les plages, avec une vue en action<br>
+            Je vis une aventure, avec une énergie en action<br>
+            Haïti, terre de soleil, de joie et de liberté<br>
+            Haïti, terre de soleil, où la vie est en liberté<br>
+            Haïti, terre de soleil, où la culture est en liberté<br>
+            Haïti, terre de soleil, où l'amour est en liberté
+        </div>
+        <div class="poem">
+            Je danse le kompa, avec une énergie en folie<br>
+            Je danse la kompa, avec une joie en folie<br>
+            Je célèbre la vie, avec une musique en folie<br>
+            Je vis une expérience, avec une passion en folie
+        </div>
+        <div class="poem">
+            Haïti, terre de soleil, de joie et de liberté<br>
+            Haïti, terre de soleil, où la vie est en liberté<br>
+            Haïti, terre de soleil, où la culture est en liberté<br>
+            Haïti, terre de soleil, où l'amour est en liberté
+        </div>
+    </div>
+
+    <!-- Auto-playing music -->
+    <audio id="music" autoplay loop>
+        <source src="your-music-file.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+                            
+        const poemContainer = document.querySelector('body > div:nth-child(2)');
+        let scrollTop = 0;
+        setInterval(() => {
+            scrollTop += 1;
+            poemContainer.scrollTop = scrollTop;
+            if (scrollTop >= poemContainer.scrollHeight - window.innerHeight) {
+                scrollTop = 0;
+            }
+        }, 50);
+
+                                   
+        const flags = document.querySelectorAll('.flag');
+        flags.forEach((flag) => {
+            flag.style.top = ${Math.random() * 100}%;
+            flag.style.left = ${Math.random() * 100}%;
+        });
+    </script>
+</body>
+</html>
+
 
 <!DOCTYPE html>
 <html lang="en">
