@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HAITI Cherieeeee...</title>
+	<style>
+		body {
+			background-image: url('YOUR_BACKGROUND_IMAGE_URL');
+			background-size: cover;
+			font-family: Arial, sans-serif;
+			color: #fff;
+		}
+		#lyrics {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 24px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<audio loop autoplay>
+		<source src="fm-freemusic-inspiring-optimistic-upbe..." type="audio/mp3">
+	</audio>
+	<div id="lyrics">
+		<p id="line1">Je vais en Haïti, pour voir la beauté en action</p>
+		<p id="line2">Je vais en Haïti, pour une expérience en action</p>
+		<p id="line3">Je découvre les plages, avec une vue en action</p>
+		<p id="line4">Je vis une aventure, avec une énergie en action</p>
+		<br>
+		<p id="line5">Haïti, terre de soleil, de joie et de liberté</p>
+		<p id="line6">Haïti, terre de soleil, où la vie est en liberté</p>
+		<p id="line7">Haïti, terre de soleil, où la culture est en liberté</p>
+		<p id="line8">Haïti, terre de soleil, où l'amour est en liberté</p>
+		<br>
+		<p id="line9">Je danse la kompa, avec une énergie en folie</p>
+		<p id="line10">Je danse la kompa, avec une joie en folie</p>
+		<p id="line11">Je célèbre la vie, avec une musique en folie</p>
+		<p id="line12">Je vis une expérience, avec une passion en folie</p>
+	</div>
+
+	<script>
+		const lyrics = document.getElementById('lyrics');
+		let position = 0;
+
+		function scrollLyrics() {
+			position += 1;
+			lyrics.style.top = position + 'px';
+			if (position > window.innerHeight) {
+				position = -lyrics.offsetHeight;
+			}
+			requestAnimationFrame(scrollLyrics);
+		}
+
+		scrollLyrics();
+	</script>
+</body>
+</html>
