@@ -1,89 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Haiti</title>
-    <style>
-        .flag {
-            position: absolute;
-            width: 100px;
-            height: 50px;
-        }
-        
-        .top-left {
-            top: 10px;
-            left: 10px;
-            background-color: blue;
-        }
-        
-        .top-left::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            background-color: red;
-        }
-        
-        .top-right {
-            top: 10px;
-            right: 10px;
-            background-color: blue;
-        }
-        
-        .top-right::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50px;
-            height: 50px;
-            background-color: red;
-        }
-        
-        .bottom-left {
-            bottom: 10px;
-            left: 10px;
-            background-color: blue;
-        }
-        
-        .bottom-left::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            background-color: red;
-        }
-        
-        .bottom-right {
-            bottom: 10px;
-            right: 10px;
-            background-color: blue;
-        }
-        
-        .bottom-right::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50px;
-            height: 50px;
-            background-color: red;
-        }
-    </style>
+ <title>Haiti</title>
+ <style>
+ body {
+ background-color: blue;
+ color: black;
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ height: 100vh;
+ overflow: hidden;
+ }
+
+ .flag {
+ position: absolute;
+ width: 100px;
+ height: 50px;
+ }
+
+ .top-left {
+ top: 10px;
+ left: 10px;
+ background-color: blue;
+ }
+
+ .top-left::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 50px;
+ height: 50px;
+ background-color: red;
+ }
+
+ .top-right {
+ top: 10px;
+ right: 10px;
+ background-color: blue;
+ }
+
+ .top-right::before {
+ content: "";
+Squaring the globe in the top right corner";
+ font-size: 24px;
+ width: 100%;
+ text-align: center;
+ top: 100vh;
+ }
+
+ .poem {
+ position: absolute;
+ font-size: 24px;
+ width: 100%;
+ text-align: center;
+ top: 100vh;
+ }
+
+ </style>
 </head>
 <body>
-    <div class="flag top-left"></div>
-    <div class="flag top-right"></div>
-    <div class="flag bottom-left"></div>
-    <div class="flag bottom-right"></div>
-    
-    <!-- Your content here -->
-    
-    <script>
-        // Your script here
-    </script>
+ <div class="flag top-left"></div>
+ <div class="flag top-right"></div>
+ <div class="flag bottom-left"></div>
+ <div class="flag bottom-right"></div>
+ <div id="poem" class="poem"></div>
+
+ <script>
+ const poems = [
+ "Je vais en Haïti, pour voir la beauté en action",
+ "Je vais en Haïti, pour une expérience en action",
+ "Je découvre les plages, avec une vue en action",
+ "Je vis une aventure, avec une énergie en action",
+ "Haïti, terre de soleil, de joie et de liberté",
+ "Haïti, terre de soleil, où la vie est en liberté",
+ "Haïti, terre de soleil, où la culture est en liberté",
+ "Haïti, terre de soleil, où l'amour est en liberté",
+ "Je danse la kompa, avec une énergie en folie",
+ "Je danse la kompa, avec une joie en folie",
+ "Je célèbre la vie, avec une musique en folie",
+ "Je vis une expérience, avec une passion en folie"
+ ];
+
+ let index = 0;
+ const poemElement = document.getElementById('poem');
+
+ function scrollPoem() {
+ poemElement.style.top = '100vh';
+ poemElement.innerText = poems[index];
+ poemElement.style.transition = 'none';
+ setTimeout(() => {
+ poemElement.style.transition = 'top 10s linear';
+ poemElement.style.top = '-100vh';
+ }, 100);
+ index = (index + 1) % poems.length;
+ setTimeout(scrollPoem, 10000);
+ }
+
+ scrollPoem();
+ </script>
 </body>
 </html>
