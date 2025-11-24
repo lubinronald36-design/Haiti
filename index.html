@@ -1,76 +1,79 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>HAITI Cherieeeee...</title>
-	<style>
-		body {
-			background-color: #3498db; /* Blue background */
-			font-family: Arial, sans-serif;
-			color: #000; /* Black text */
-		}
-		#lyrics {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			font-size: 24px;
-			text-align: center;
-		}
-		.flag {
-			position: absolute;
-			top: 10px;
-			left: 10px;
-		}
-		.heart-icon {
-			position: absolute;
-			font-size: 50px;
-		}
-		.top-left {
-			top: 10px;
-			left: 100px;
-		}
-		.top-right {
-			top: 10px;
-			right: 100px;
-		}
-		.bottom-left {
-			bottom: 10px;
-			left: 100px;
-		}
-		.bottom-right {
-			bottom: 10px;
-			right: 100px;
-		}
-	</style>
+    <title>Haiti</title>
+    <style>
+        body {
+            background-color: #3498db; /* Blue background */
+            font-family: Arial, sans-serif;
+            color: #000; /* Black text */
+            margin: 0;
+            padding: 0;
+        }
+        
+        #lyrics {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .flag {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+        }
+        
+        .top-left {
+            top: 10px;
+            left: 10px;
+        }
+        
+        .top-right {
+            top: 10px;
+            right: 10px;
+        }
+        
+        .bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+        
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
-	<div class="flag">
-		<img src="https:                                                                                                                           
-	</div>
-	<div class="heart-icon top-left">❤️</div>
-	<div class="heart-icon top-right">❤️</div>
-	<div class="heart-icon bottom-left">❤️</div>
-	<div class="heart-icon bottom-right">❤️</div>
-	<div id="lyrics">
-		<p>Haïti, terre de soleil, de joie et de liberté</p>
-		<p>Haïti, terre de soleil, où la vie est en liberté</p>
-		<p>Haïti, terre de soleil, où la culture est en liberté</p>
-	</div>
-
-	<script>
-		const lyrics = document.getElementById('lyrics');
-		let position = 0;
-
-		function scrollLyrics() {
-			position += 1;
-			lyrics.style.top = position + 'px';
-			if (position > window.innerHeight) {
-				position = -lyrics.offsetHeight;
-			}
-			requestAnimationFrame(scrollLyrics);
-		}
-
-		scrollLyrics();
-	</script>
+    <img src="https://flagpedia.net/data/flags/icon/72x54/ht.png" class="flag top-left">
+    <img src="https://flagpedia.net/data/flags/icon/72x54/ht.png" class="flag top-right">
+    <img src="https://flagpedia.net/data/flags/icon/72x54/ht.png" class="flag bottom-left">
+    <img src="https://flagpedia.net/data/flags/icon/72x54/ht.png" class="flag bottom-right">
+    
+    <div id="lyrics">
+        <h1>Haiti</h1>
+        <p>Haïti, terre de soleil, de joie et de liberté</p>
+        <p>Haïti, terre de soleil, où la vie est en liberté</p>
+        <p>Haïti, terre de soleil, où la culture est en liberté</p>
+    </div>
+    
+    <script>
+        const lyrics = document.getElementById('lyrics');
+        let position = 0;
+        function scrollLyrics() {
+            position += 1;
+            lyrics.style.top = position + 'px';
+            if (position > window.innerHeight) {
+                position = -lyrics.offsetHeight;
+            }
+            requestAnimationFrame(scrollLyrics);
+        }
+        scrollLyrics();
+    </script>
 </body>
 </html>
