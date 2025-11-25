@@ -1,12 +1,18 @@
 .contact-info {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid white;
+  margin-top: 20px;
+  padding: 10px;
+  background-image: linear-gradient(to bottom, rgba(33, 63, 147, 0.5), rgba(255, 255, 255, 0.2));
+  border-bottom: 1px solid white;
 }
 
 .contact-info p {
-    font-size: 16px;
-    color: white;
-    text-shadow: 1px 1px 2px black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.contact-info a:hover {
+  color: #ffd700;
+  text-decoration: none;
 }
